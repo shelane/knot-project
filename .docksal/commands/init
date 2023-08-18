@@ -1,0 +1,26 @@
+#!/usr/bin/env bash
+
+## Initialize stack and required files
+##
+## Usage: fin init
+
+# Abort if anything fails
+set -e
+#-------------------------- Settings --------------------------------
+green='\033[0;32m'
+green_bg='\033[42m'
+NC='\033[0m'
+#-------------------------- Execution --------------------------------
+
+fin project rm -f
+fin project start
+
+fin exec composer clear-cache
+fin exec COMPOSER_PROCESS_TIMEOUT=2000
+fin exec COMPOSER_MEMORY_LIMIT=-1 composer install
+
+echo -en "${green_bg} DONE! ${NC}"
+echo
+echo -e "${green} Knot is ready and you can safely remove the starterkit directory.${NC}"
+
+#-------------------------- END: Execution --------------------------------
