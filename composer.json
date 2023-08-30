@@ -21,7 +21,6 @@
     "ext-pdo": "*",
     "composer/installers": "^2.1",
     "fortawsome/fontawesome": "^6.4",
-    "illuminate/pagination": "^10.16",
     "jquery/jquery": "^3.7",
     "oomphinc/composer-installers-extender": "^2.0",
     "shelane/knot": "dev-main",
